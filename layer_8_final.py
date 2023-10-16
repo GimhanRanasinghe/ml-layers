@@ -82,7 +82,7 @@ def get_preprocessed_except_pca(label, train, valid, append_file = False, testSe
     scaler = StandardScaler()
     
 
-    # fit the scaler
+    # fit the  scaler
     sx_train = pd.DataFrame(scaler.fit_transform(rx_train), columns=rx_train.columns)
     sx_valid = pd.DataFrame(scaler.transform(x_valid), columns=x_valid.columns)
     

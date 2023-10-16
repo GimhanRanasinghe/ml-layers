@@ -4,7 +4,7 @@
 # In[27]:
 
 
-# Importing necessary libraries
+# Importing  necessary libraries
 import pandas as pd
 import numpy as np
 from sklearn.svm import SVC
