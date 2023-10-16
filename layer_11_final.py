@@ -260,7 +260,7 @@ def train_and_predict_test(label, n_comp = 0.98, kernal="rbf", gamma=0.001, C=10
     result = classifier.predict(psx_test)
     
     res_df = pd.DataFrame(result, columns=[label])
-#     res_df.to_csv(f"./190438H_{label}.csv")
+#     res_df.to_csv(f"./190493U_{label}.csv")
     return res_df
 
 
@@ -290,7 +290,7 @@ for row in config:
     dfs.append(train_and_predict_test(label=row["label"], n_comp=row["n_comp"], kernal=row["kernal"], gamma=row["gamma"], C=row["C"], class_weight=row["class_weight"]))
 final = pd.concat(dfs, axis=1)
 final["ID"] = [i for i in range(1, final.shape[0]+1)]
-final.to_csv("190438H_layer_10_att_3.csv", index=False)
+final.to_csv("190493U_layer_10_att_3.csv", index=False)
 
 
 # In[13]:
@@ -313,7 +313,7 @@ for row in config:
     dfs.append(train_and_predict_test(label=row["label"], n_comp=row["n_comp"], kernal=row["kernal"], gamma=row["gamma"], C=row["C"], class_weight=row["class_weight"]))
 final = pd.concat(dfs, axis=1)
 final["ID"] = [i for i in range(1, final.shape[0]+1)]
-final.to_csv("190438H_layer_10_att_5.csv", index=False)
+final.to_csv("190493U_layer_10_att_5.csv", index=False)
 
 
 # In[ ]:
